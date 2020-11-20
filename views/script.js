@@ -5,6 +5,7 @@ var equipmentArray = ['EMF-reader', 'Spirit Box', 'Ghost Writing Book', 'Photo C
 
 let button = document.querySelector('button');
 let result = document.querySelector('div');
+
 // FUNCTIONS
 randomNumber = (min, max) => {
     let a = max - min + 1
@@ -12,12 +13,14 @@ randomNumber = (min, max) => {
     let result = Math.floor(b) + min;
     return result;
 }
+
 var randomizeMap = () => {
+    // var temp = [];
     var counter = 0;
-    var interval = setInterval(() => {
+    setInterval(() => {
         for (let i = 0; i < mapArray.length; i++) {
             if (counter === 1000) {
-                clearInterval(interval);
+                break;
             } else {
                 let index = randomNumber(0, mapArray.length - 1);
                 result.innerText = mapArray[index];
@@ -26,6 +29,8 @@ var randomizeMap = () => {
             console.log(i);
         }
     }, 10);
+    // result = temp.push(result.innerText).toString();
+    // console.log(temp);
 }
 
 var randomizeLight = () => {
@@ -59,4 +64,3 @@ var randomizeEquipment = () => {
         }
     }, 10);
 }
-
