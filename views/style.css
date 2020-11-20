@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 5%;
+  padding: 3%;
+  border: dashed black 1px;
+}
+
+.home > p {
+  text-align: center;
+  width: 80%;
+  font-size: 12pt;
+}
+
+.home > h1 {
+  text-align: center;
+  font-size: 24pt;
+}
+.home > h2 {
+  font-size: 16pt;
+}
+
+.nav-links {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
+.nav-links > a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  min-width: 128px;
+  padding: 3%;
+  margin: 0 2% 0 2%;
+  border: solid black 1px;
+  background: black;
+  border-radius: 12px;
+  animation: fade-reset 300ms forwards;
+}
+
+.nav-links > a:hover {
+  color: black;
+  background: white;
+  animation: fade-start 300ms forwards;
+}
+
+@keyframes fade-start {
+  from {
+    color: white;
+    background: black;
+  }
+  to {
+    color: black;
+    background: white;
+  }
+}
+
+@keyframes fade-reset {
+  from {
+    color: black;
+    background: white;
+  }
+  to {
+    color: white;
+    background: black;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .home {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+  }
+
+  .home > h1 {
+    font-size: 16pt;
+  }
+
+  .home > h2 {
+    font-size: 12pt;
+  }
+
+  .home > p {
+    font-size: 10pt;
+  }
+
+  .nav-links > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8pt;
+    min-width: 20vw;
+    margin: 5%;
+    height: 40px;
+  }
+} ;

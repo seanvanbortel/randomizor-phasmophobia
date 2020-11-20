@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#maps {
+  width: 15vw;
+  height: 15vh;
+  border: solid black 1px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5%;
+  font-size: 16pt;
+  background: #eeee;
+  text-align: center;
+}
+button {
+  background: black;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  min-width: 240px;
+  padding: 1%;
+  font-size: 12pt;
+}
