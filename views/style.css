@@ -1,5 +1,7 @@
 * {
   opacity: 0.98;
+  filter: invert(100);
+  color: white;
 }
 
 body {
@@ -12,12 +14,8 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  font-family: "Montserrat", sans-serif;
-  background: linear-gradient(
-    to bottom right,
-    rgba(210, 230, 260, 0.4),
-    rgba(260, 230, 200, 0.4)
-  );
+  font-family: "Special Elite", cursive;
+  background: #fff;
 }
 
 .home {
@@ -28,19 +26,22 @@ body {
   width: 60%;
   margin: 5%;
   padding: 3%;
-  border: dashed black 1px;
+  border-top: solid #ccc 1px;
+  border-bottom: solid #ccc 1px;
 }
 
 .home > p {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 200;
   text-align: center;
   font-size: 12pt;
   line-height: 32px;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .home > h1 {
   text-align: center;
-  font-size: 24pt;
+  font-size: 32pt;
 }
 .home > h2 {
   font-size: 16pt;
@@ -55,10 +56,10 @@ body {
 }
 .nav-links > a {
   text-decoration: none;
-  color: white;
   text-align: center;
   text-transform: uppercase;
   min-width: 128px;
+  font-size: 16pt;
   padding: 3%;
   margin: 0 2% 0 2%;
   background: rgba(210, 230, 260, 0.8);
@@ -67,30 +68,28 @@ body {
 }
 
 .nav-links > a:hover {
-  color: black;
-  background: white;
   animation: fade-start 300ms forwards;
 }
 
 @keyframes fade-start {
   from {
-    color: white;
-    background: black;
+    color: #333;
+    background: #eee;
   }
   to {
-    color: black;
-    background: #eee;
+    color: #eee;
+    background: #333;
   }
 }
 
 @keyframes fade-reset {
   from {
-    color: black;
-    background: #eee;
+    color: #eee;
+    background: #333;
   }
   to {
-    color: white;
-    background: black;
+    color: #333;
+    background: #eee;
   }
 }
 
@@ -112,57 +111,154 @@ body {
   }
 }
 
-footer {
+.footer {
   opacity: 0.5;
   animation: footer-reset 300ms forwards;
 }
 
-footer:hover {
+.footer:hover {
   animation: footer-start 300ms forwards;
 }
 
-footer > a {
+.footer > a {
   text-decoration: none;
-  color: black;
+  color: #333;
 }
-@media screen and (max-width: 375px) {
+
+@media screen and (max-width: 360px) {
   body {
-    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    padding: 5%;
   }
 
   .home {
     margin: 0;
     padding: 0;
-    width: 90%;
+    width: 80%;
+    border: none;
   }
 
   .home > h1 {
-    font-size: 20pt;
+    font-size: 5vh;
   }
 
   .home > h2 {
-    font-size: 12pt;
+    font-size: 2.5vh;
     padding: 1.5%;
   }
 
   .home > p {
-    font-size: 10pt;
-    line-height: 16pt;
-    max-width: 80%;
+    font-size: 2vh;
+    line-height: normal;
   }
 
   .nav-links > a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 8pt;
+    font-size: 2vh;
     min-width: 20vw;
     margin: 5%;
     height: 40px;
   }
 
-  footer {
+  .footer {
     font-size: 60%;
-    padding: 16px;
+    margin-top: 5vh;
   }
-} ;
+}
+@media screen and (max-width: 480px) and (min-width: 361px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 5%;
+  }
+
+  .home {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    border: none;
+  }
+
+  .home > h1 {
+    font-size: 5vh;
+  }
+
+  .home > h2 {
+    font-size: 2.5vh;
+    padding: 1.5%;
+  }
+
+  .home > p {
+    font-size: 2vh;
+    line-height: normal;
+  }
+
+  .nav-links > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    min-width: 20vw;
+    margin: 5%;
+    height: 40px;
+  }
+
+  .footer {
+    font-size: 60%;
+    margin-top: 5vh;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 480px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 5%;
+  }
+
+  .home {
+    margin: 0;
+    padding: 0;
+    width: 80%;
+  }
+
+  .home > h1 {
+    font-size: 5vh;
+  }
+
+  .home > h2 {
+    font-size: 2.5vh;
+    padding: 1.5%;
+  }
+
+  .home > p {
+    font-size: 2vh;
+    line-height: normal;
+  }
+
+  .nav-links > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    min-width: 20vw;
+    margin: 5%;
+    height: 40px;
+  }
+
+  .footer {
+    margin-top: 5vh;
+  }
+}
