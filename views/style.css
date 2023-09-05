@@ -220,6 +220,20 @@ body {
   }
 }
 
+.button-dark-mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  box-shadow: 4px 4px 16px #333;
+  border-radius: 50% 50%;
+  width: 16px;
+  height: 16px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1024px) and (min-width: 480px) {
   body {
     display: flex;
