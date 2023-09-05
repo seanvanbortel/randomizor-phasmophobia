@@ -7,9 +7,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
   font-family: "Special Elite", cursive;
   background: #fff;
+  transition: 0.3s;
 }
 
 .home {
@@ -49,15 +49,18 @@ body {
   align-items: center;
 }
 .nav-links > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  min-width: 128px;
+  width: 256px;
+  height: 64px;
   font-size: 16pt;
   padding: 3%;
   margin: 0 2% 0 2%;
   background: rgba(210, 230, 260, 0.8);
-  border-radius: 12px;
   animation: fade-reset 300ms forwards;
 }
 
@@ -89,7 +92,7 @@ body {
 
 @keyframes footer-start {
   from {
-    opacity: 0.5;
+    opacity: 0.8;
   }
   to {
     opacity: 1;
@@ -101,12 +104,12 @@ body {
     opacity: 1;
   }
   to {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }
 
 .footer {
-  opacity: 0.5;
+  opacity: 0.8;
   animation: footer-reset 300ms forwards;
 }
 
@@ -116,108 +119,7 @@ body {
 
 .footer > a {
   text-decoration: none;
-  color: #333;
-}
-
-@media screen and (max-width: 360px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-height: 100vh;
-    padding: 5%;
-  }
-
-  .home {
-    margin: 0;
-    padding: 0;
-    width: 80%;
-    border: none;
-  }
-
-  .home > h1 {
-    font-size: 5vh;
-  }
-
-  .home > h2 {
-    font-size: 2.5vh;
-    padding: 1.5%;
-  }
-
-  .home > p {
-    font-size: 2vh;
-    line-height: normal;
-  }
-
-  .nav-links > a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2vh;
-    min-width: 20vw;
-    margin: 5%;
-    height: 40px;
-  }
-
-  .footer {
-    font-size: 60%;
-    margin-top: 5vh;
-  }
-}
-
-.dark-mode {
-  opacity: 0.98;
-  filter: invert(100);
-  background-color: #111;
-  color: #333;
-}
-
-@media screen and (max-width: 480px) and (min-width: 361px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 5%;
-  }
-
-  .home {
-    margin: 0;
-    padding: 0;
-    width: 90%;
-    border: none;
-  }
-
-  .home > h1 {
-    font-size: 5vh;
-  }
-
-  .home > h2 {
-    font-size: 2.5vh;
-    padding: 1.5%;
-  }
-
-  .home > p {
-    font-size: 2vh;
-    line-height: normal;
-  }
-
-  .nav-links > a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2vh;
-    min-width: 20vw;
-    margin: 5%;
-    height: 40px;
-  }
-
-  .footer {
-    font-size: 60%;
-    margin-top: 5vh;
-  }
+  color: #111;
 }
 
 .button-dark-mode {
@@ -232,49 +134,112 @@ body {
   height: 16px;
   padding: 1rem;
   cursor: pointer;
+  position: absolute;
+  top: 3rem;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 480px) {
+.dark-mode {
+  opacity: 0.98;
+  filter: invert(100);
+  background-color: #111;
+  color: #333;
+  transition: 0.3s;
+}
+
+#randomizeButton {
+  font-family: "Special Elite", cursive;
+}
+
+@media screen and (max-width: 720px) {
   body {
-    display: flex;
+    justify-content: start;
+    padding: 1rem;
+  }
+
+  .home {
+    width: 100%;
+    border: none;
+  }
+
+  .home > h1 {
+    font-size: 2rem;
+  }
+
+  .home > h2 {
+    font-size: 1.2rem;
+    padding: 0 0 1rem 0;
+  }
+
+  .home > p {
+    font-size: 1rem;
+    line-height: normal;
+    text-align: justify;
+  }
+
+  .nav-links {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 5%;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 90%;
+    height: 60%;
+  }
+
+  .footer {
+    font-size: 60%;
+    margin-top: 5vh;
+  }
+}
+
+.button-dark-mode {
+  padding: 0.5rem;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 720px) {
+  body {
+    padding: 1rem;
+  }
+
+  .button-dark-mode {
+    padding: 0.5rem;
+    right: 1.5rem;
   }
 
   .home {
     margin: 0;
     padding: 0;
-    width: 80%;
+    width: 90%;
+    border: none;
   }
 
   .home > h1 {
-    font-size: 5vh;
+    font-size: 2.3rem;
   }
 
   .home > h2 {
-    font-size: 2.5vh;
-    padding: 1.5%;
+    font-size: 1.5rem;
+    padding: 0 0 1rem 0;
   }
 
   .home > p {
-    font-size: 2vh;
+    font-size: 1.2rem;
     line-height: normal;
+    text-align: center;
   }
 
-  .nav-links > a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2vh;
-    min-width: 20vw;
-    margin: 5%;
-    height: 40px;
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 100%;
   }
 
   .footer {
-    margin-top: 5vh;
+    margin-top: 3rem;
   }
 }

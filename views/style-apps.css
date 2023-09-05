@@ -1,19 +1,8 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: "Special Elite", cursive;
-  background: #fff;
-}
+@import 'style.css';
 
 a {
   text-decoration: none;
-  color: #333;
+  color: #111;
 }
 
 div {
@@ -49,7 +38,7 @@ button:hover {
 }
 
 span {
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 nav {
@@ -60,7 +49,7 @@ nav {
   font-size: 80%;
   min-width: 320px;
   bottom: 3vh;
-  opacity: 0.5;
+  opacity: 0.8;
   animation: fade-reset 300ms forwards;
 }
 
@@ -68,16 +57,9 @@ nav:hover {
   animation: fade-start 300ms forwards;
 }
 
-.dark-mode {
-  opacity: 0.98;
-  filter: invert(100);
-  color: #333;
-}
-
-
 @keyframes fade-start {
   from {
-    opacity: 0.5;
+    opacity: 0.8;
   }
   to {
     opacity: 1;
@@ -89,7 +71,7 @@ nav:hover {
     opacity: 1;
   }
   to {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }
 @keyframes button-start {
