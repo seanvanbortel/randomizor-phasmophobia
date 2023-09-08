@@ -7,6 +7,8 @@ let button = document.querySelector('button');
 let result = document.getElementById("randomizer");
 let resultOnPage = document.getElementById("result");
 
+let darkMode = localStorage.getItem("dark-mode");
+
 // FUNCTIONS
 randomNumber = (min, max) => {
     let a = max - min + 1
@@ -108,4 +110,10 @@ var randomizeEquipment = () => {
 const toggleDarkMode = () => {
     let body = document.querySelector('body');
     body.classList.toggle("dark-mode");
+    if (darkMode == "enabled") {
+        localStorage.setItem("dark-mode", "disabled");
+    }
+    else {
+        localStorage.setItem("dark-mode", "enabled");
+    }
 }

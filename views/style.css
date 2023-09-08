@@ -8,8 +8,8 @@ body {
   align-items: center;
   height: 100vh;
   font-family: "Special Elite", cursive;
-  background: #fff;
-  transition: 0.3s;
+  background: #000;
+  filter: invert(100);
 }
 
 .home {
@@ -139,10 +139,9 @@ body {
 }
 
 .dark-mode {
-  opacity: 0.98;
-  filter: invert(100);
-  background-color: #111;
-  color: #333;
+  filter: invert(0);
+  background-color: #fff;
+  color: #111;
   transition: 0.3s;
 }
 
